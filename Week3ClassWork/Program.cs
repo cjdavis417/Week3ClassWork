@@ -26,6 +26,9 @@ namespace Week3ClassWork
                 if (int.TryParse(Console.ReadLine(), out intParse))
                 {
                     newCat.Height = intParse;
+                } else
+                {
+                    Console.Write("Wrong value type. Must be number.");
                 }
 
                 Console.WriteLine();
@@ -34,12 +37,20 @@ namespace Week3ClassWork
                 {
                     newCat.Length = intParse;
                 }
+                else
+                {
+                    Console.Write("Wrong value type. Must be number.");
+                }
 
                 Console.WriteLine();
                 Console.Write("What is the adult weight of this cat? ");
                 if (int.TryParse(Console.ReadLine(), out intParse))
                 {
                     newCat.Weight = intParse;
+                }
+                else
+                {
+                    Console.Write("Wrong value type. Must be number.");
                 }
 
                 double doubleParse;
@@ -49,6 +60,10 @@ namespace Week3ClassWork
                 {
                     newCat.Speed = doubleParse;
                 }
+                else
+                {
+                    Console.Write("Wrong value type. Must be number.");
+                }
 
 
                 Console.WriteLine("Type: " + newCat.Type);
@@ -57,6 +72,9 @@ namespace Week3ClassWork
                 Console.WriteLine("Weight: " + newCat.Weight);
                 Console.WriteLine("MAX Speed: " + newCat.Speed);
 
+
+                newCat.OutputToFile();
+                Console.WriteLine(@"The file is outputed here: C:\Users\Public\Documents\WriteLines2.txt");
                 Console.ReadLine();
 
             }
